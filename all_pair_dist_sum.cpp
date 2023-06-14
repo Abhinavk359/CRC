@@ -10,6 +10,10 @@ int main()
     cin>>a[i];
   }
   vector<int> prefix_sum(a.begin(),a.end());
+  for(int i=1;i<n;i++)
+  {
+    prefix_sum[i]+=prefix_sum[i-1];
+  }
   long long sum=0;
   for(int i=1;i<n;i++)
   {
